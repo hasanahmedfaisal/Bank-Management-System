@@ -13,6 +13,8 @@ var corsOptions = {
     origin: '*',
 }
 app.use(cors(corsOptions))
+app.get('/', (req, res) => res.send('Working!!!'));
+
 app.use(express.json())
 app.use(accountsRouter)
 app.use(employeeRouter)
